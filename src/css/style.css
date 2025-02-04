@@ -16,6 +16,8 @@ html
 
 #footer { grid-area: footer; }
 
+#container { overflow: hidden; }
+
 /* Header Stylization */
 #container main .logo-container
 {
