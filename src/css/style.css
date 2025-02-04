@@ -1,0 +1,193 @@
+/* Font - Josefin Sans */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+html 
+{
+    font-family: var(--Font);
+    font-size: 62.5%;
+}
+
+/* Grid Name Configuration */
+.logo-container { grid-area: header; }
+
+.content { grid-area: card-content; }
+
+.hero { grid-area: hero; }
+
+#footer { grid-area: footer; }
+
+/* Header Stylization */
+#container main .logo-container
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 9.5%;
+    height: 10vh;
+}
+#container .logo-container .logo { width: 13.5rem; }
+
+#container .logo-container .logo:hover
+{
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+/* Hero Background config */
+#container .hero 
+{
+    background: url(../images/hero-mobile.jpg) no-repeat center;
+    background-size: cover;
+    height: 30vh;
+}
+
+/* Page Content container */
+#container .content
+{
+    background: linear-gradient(var(--BgColor));
+    display: flex;
+    height: 55vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 9.5%;
+    gap: 7%;
+}
+
+#container .content .title
+{
+    font-size: 4.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    color: var(--PrimaryColor);
+    font-weight: 300;
+}
+#container .content .title span
+{
+    color: var(--Neutral);
+    font-weight: 500;
+    display: block;
+}
+
+#container .content .text
+{
+    font-size: calc(var(--FontSize) * 0.9);
+    color: var(--PrimaryColor);
+    line-height: 2rem;
+}
+
+/* Form Stylization */
+#container #subscribe-form { width: 100%; }
+
+#container #subscribe-form label
+{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    position: relative;
+}
+/* Input - Email */
+#container #subscribe-form label #email
+{
+    width: 100%;
+    height: 100%;
+    border: 0.1rem solid rgba(var(--NeutralRGB), 50%);
+    border-radius: 2rem;
+    padding: 0 2rem;
+    background-color: transparent;
+    font-family: var(--Font);
+    outline: 0;
+}
+#container #subscribe-form label #email::placeholder 
+{
+    color: var(--PrimaryColor);
+    opacity: 50%; 
+}
+
+/* Submit Button */
+#container #subscribe-form label .submit-button
+{
+    border: none;
+    width: 7.5rem;
+    height: 4rem;
+    border-radius: 2.2rem;
+    background: linear-gradient(var(--SubmitButtonColor));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+#container #subscribe-form label .submit-button:hover { opacity: 50%; }
+
+#container #subscribe-form label .submit-button img
+{
+    height: var(--FontSize);
+    width: 1rem;
+}
+
+/* Input Error Style */
+#container #subscribe-form label #email:invalid
+{
+    border: 0.1rem solid var(--Error);
+    position: relative;
+}
+#container #subscribe-form label #email:invalid ~ .submit-button::before
+{
+    content: '';
+    width: 2.4rem;
+    height: 2.4rem;
+    display: block;
+    background: url(../images/icon-error.svg) no-repeat center center;
+    position: absolute;
+    left: calc(-2.4rem - 1rem);
+}
+#container #subscribe-form div .error
+{
+    display: block;
+    text-align: left;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    color: var(--Error);
+    cursor: default;
+    opacity: 1;
+}
+#container #subscribe-form div .error.hidden
+{
+    transition: 0.2s ease-in-out;
+    opacity: 0;
+}
+
+/* Footer */
+#footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4rem 4rem 0 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#footer .attribution 
+{ 
+    font-size: 1.1rem;
+    line-height: 2rem;
+    text-align: center;
+    margin: 0 4rem;
+    color: var(--Neutral); 
+}
+
+.attribution a 
+{ 
+    color: var(--PrimaryColor); 
+    text-decoration: none;
+}

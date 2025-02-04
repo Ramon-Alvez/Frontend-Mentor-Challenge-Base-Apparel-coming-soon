@@ -1,0 +1,68 @@
+@media screen and (min-width: 565px) {
+    /* Grid Config */
+    #container main {
+        display: grid;
+        grid-template-areas: 
+            "header hero"
+            "card-content hero"
+        ;
+        grid-template-columns: 1.3fr 1fr;
+        grid-template-rows: 
+            20vh 
+            80vh
+        ;
+        background: url(../images/bg-pattern-desktop.svg) no-repeat;
+        background-size: 60% 100vh;
+    }
+
+    /* Page Hero */
+    #container main .hero 
+    {
+        background: url(../images/hero-desktop.jpg) no-repeat center;
+        background-size: cover;
+        height: 100%;
+    }
+    
+    /* Page Header */
+    #container main .logo-container
+    {
+        height: 100%;
+        padding: 0 14%;
+    }
+
+    /* Page Content container */
+    #container main .content
+    {
+        text-align: left;
+        padding: 0 14%;
+        height: 100%;
+        background: transparent;
+        gap: 4%;
+    }
+    #container main .content .title { align-self: flex-start; }
+    
+    /* Form */
+    #container #subscribe-form label { height: 5rem; }
+    
+    /* Input */
+    #container #subscribe-form label #email { border-radius: 2.5rem; }
+    
+    /* Button */
+    #container #subscribe-form label .submit-button
+    {
+        width: 8rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+    }
+}
+
+/* Adjusting padding in bigger display sizes */
+@media screen and (min-width: 900px) {   
+    #container main .logo-container { padding: 0 26%; }
+    /* Page Content container */
+    #container main .content
+    {
+        text-align: left;
+        padding: 0 26%;
+    }
+}

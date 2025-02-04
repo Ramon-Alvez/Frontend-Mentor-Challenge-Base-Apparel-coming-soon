@@ -1,0 +1,25 @@
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --PrimaryColor: rgb(206, 151, 151);
+    --Error: hsl(0, 93%, 68%);
+
+    /* ### Neutral */
+
+    --Neutral: hsl(0, 6%, 24%);
+    --NeutralRGB: 206, 151, 151;
+
+    /* ### Gradients */
+
+    --SubmitButtonColor: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+    --BgColor: 135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%);
+
+    /* ## Typography */
+
+    --Font: 'Josefin Sans', sans-serif;
+    /* ### Body Copy */
+
+    --FontSize: 1.6rem;
+}
