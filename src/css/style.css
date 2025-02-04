@@ -124,7 +124,6 @@ html
     transition: 0.2s ease-in-out;
 }
 #container #subscribe-form label .submit-button:hover { opacity: 50%; }
-#container #subscribe-form label .submit-button:disabled { opacity: 90%; }
 
 #container #subscribe-form label .submit-button img
 {

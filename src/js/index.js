@@ -1,18 +1,23 @@
+const form = document.getElementById('subscribe-form')
 const email = document.getElementById('email')
 const emailRejex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
 const errorMessage = document.querySelector('span.error')
-const submitButton = document.querySelector('button.submit-button')
 
+function addError() {
+    email.classList.add('invalid')
+    errorMessage.classList.remove('hidden')
+}
+function removeError() {
+    email.classList.remove('invalid')
+    errorMessage.classList.add('hidden')
+}
 
-email.addEventListener('change', () => {
-    if (!emailRejex.test(email.value)) {
-        email.classList.add('invalid')
-        errorMessage.classList.remove('hidden')
-        submitButton.disabled = true
-    }
+form.addEventListener('submit', (event) => {
+    event.preventDefault()
+   
+    if (email.value.length === 0 || !emailRejex.test(email.value)) addError()
     else {
-        email.classList.remove('invalid')
-        errorMessage.classList.add('hidden')
-        submitButton.disabled = false
+        removeError()
+        form.submit()
     }
 })
